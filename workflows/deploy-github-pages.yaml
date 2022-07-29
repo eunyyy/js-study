@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - 'advanced/**'
+      - ./advanced
 
 jobs:
   deploy:
