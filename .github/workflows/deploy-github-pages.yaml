@@ -3,7 +3,6 @@ name: Deploy Frontend to Github Pages
 on:
   push:
     branches: ['master']
-    paths: ['advanced']
 
 jobs:
   deploy:
@@ -40,4 +39,4 @@ jobs:
         with:
           github_token: ${{ secrets.GH_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: ./advanced
+          publish_dir: ./advanced/public
