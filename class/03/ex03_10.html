@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="'viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        
+    </head>
+    <body>
+        정사각형 별찍기<br/>
+        <script>
+              for(var i=0; i<5; i++){
+                for(var j=0; j<5; j++){
+                    document.write('*');
+                }
+                document.write('<br/>');
+              }
+        </script>
+
+        삼각형 별찍기<br/>
+        <script>
+              for(var i=0; i<5; i++){
+                for(var j=0; j<i+1; j++){
+                    document.write('*');
+                }
+                document.write('<br/>');
+              }
+        </script>
+
+        <h4>삼각형 별찍기 - 역순</h4>
+        <script>
+                const max = 5;
+
+                // I : max 만큼 반복
+                for(var i = 0; i < max; i++){
+
+                    // A : max - 1 - i 만큼 공백
+                    const aMax = max - i - 1;
+                    for (var a = 0; a < aMax; a++) {
+                        document.write('&nbsp;');
+                    }
+
+                    // B : i + 1 만큼 별 찍기
+                    const bMax = i + 1;
+                    for(var b = 0; b < bMax; b++){
+                        document.write('*');
+                    }
+
+                    // 줄바꿈
+                    document.write('<br/>');
+                }
+
+                /*
+                첫 번째 반복
+                I : i = 0
+                    - A : 4번 반복 
+                    - B : 1번 반복
+                    - 줄바꿈
+                
+                두 번째 반복
+                I : i = 1
+                    - A : 3번 반복
+                    - B : 2번 반복
+                    - 줄바꿈
+                
+                세 번째 반복
+                I : i = 2
+                    - A : 2번 반복
+                    - B : 3번 반복
+                    - 줄바꿈
+                */
+        </script>
+    </body>
+</html>

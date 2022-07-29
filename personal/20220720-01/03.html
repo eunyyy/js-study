@@ -1,0 +1,95 @@
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>령은이 개인 과외 #3 - 로그인 테스트</title>
+
+  <style>
+    div form{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    #welcomeBox {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div id="welcomeBox">
+      <h1 id="welcome"></h1>
+      <button onclick="handleLogoutClick()">로그아웃</button>
+    </div>
+    <div id="loginBox">
+      <form id="loginForm">
+        <h1>로그인을 하세요!</h1>
+        <input id="username" type="text" placeholder="아이디를 입력하세요." autocomplete="off"/>
+        <input id="password" type="password" placeholder="비밀번호를 입력하세요." autocomplete="off"/>
+        <button type="submit">로그인</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function handleLogoutClick() {
+      document.getElementById('welcomeBox').style.display = 'none';
+      document.getElementById('loginBox').style.display = 'flex';
+      document.getElementById('welcome').innerText = '';
+      document.getElementById('username').value = '';
+      document.getElementById('password').value = '';
+    }
+  </script>
+  <script>
+    /* 문제!!
+      조건문을 사용하여 로그인 상황에 대한 분기처리를 구현하세요!
+      1) 아이디를 입력하지 않았을 때! alert("아이디를 입력하세요!")을 띄우세요.
+      2) 비밀번호를 입력하지 않았을 때! alert("비밀번호를 입력하세요!")을 띄우세요.
+      3) 아이디가 틀린 경우! alert("아이디가 존재하지 않습니다!")을 띄우세요.
+      4) 비밀번호가 틀린 경우! alert("비밀번호가 올바르지 않습니다!")을 띄우세요.
+      5) 로그인이 성공한 경우! 아래 내용을 코드 블럭({ }) 안에 입력하세요!
+        document.getElementById('loginBox').style.display = 'none';
+        document.getElementById('welcomeBox').style.display = 'block';
+        document.getElementById('welcome').innerText = `환영합니다. ${userData.username}님.`;
+    */
+
+    var userData = {
+      username: 'eunyyy',
+      password: '1234',
+      name: '령으니'
+    }
+
+    function handleLoginClick(e) {
+      e.preventDefault();
+
+      // input으로부터 입력받은 username, password;
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      /* 여기에 코드를 입력하세요!!! */
+      if('' == username){
+        alert('아이디를 입력하세요!');
+      } else if('' == password){
+        alert('비밀번호를 입력하세요!');
+      } else if(userData.username != username){
+        alert('아이디가 존재하지 않습니다!');
+      } else if(userData.password != password){
+        alert('비밀번호가 옳바르지 않습니다.');
+      } else {
+        document.getElementById('loginBox').style.display = 'none';
+        document.getElementById('welcomeBox').style.display = 'block';
+        document.getElementById('welcome').innerText = `환영합니다. ${userData.username}님.`;
+      }
+    }
+
+    document.getElementById('loginForm').addEventListener('submit', handleLoginClick);
+  </script>
+</body>
+
+</html>

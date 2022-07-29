@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //랜덤한 정수 생성
+        function nextRandomInteger(limit){
+            return a = Math.round(Math.random()*limit);
+        }
+        
+        //console.log(nextRandomInteger(25));
+        var alphabet ='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        function randomAlphabet(){
+            return alphabet.charAt(nextRandomInteger(25));
+        }
+        //console.log(randomAlphabet());
+        //양음으로 랜덤한 속도를 생성
+        function randomSpeed(maxSpeed){
+            return Math.random()*maxSpeed - Math.random()*maxSpeed;
+        }
+        //console.log(randomSpeed(100))
+            
+        //MovingText 함수
+        var canvasWidth = 700;
+        var canvasHeight = 500;
+        function MovingText(){
+            this.x = nextRandomInteger(canvasWidth);
+            this.y = nextRandomInteger(canvasHeight);
+            this.vX =randomSpeed(10);
+            this.vY =randomSpeed(10);
+            //문서 객체를 생성
+            this.body = document.createElement('h1');
+            this.body = innerHTML = randomAlphabet();
+            this.body.style.postion = 'absolute';
+            document.body.appendChild(this.body);
+        }
+        MovingText.prototype.move=function(){
+            //범위검사
+            if(this.x<0 || this.x>canvasWidth){this.vX*=-1;}
+            if(this.y<0 || this.y>canvasWidth){this.vY*=-1;}
+            //이동
+            this.x += this.vX;
+            this.y += this.vY;
+            //화면에 이동표시
+            this.body.style.left = this.x + 'px';
+            this.body.style.top = this.y + 'px';
+
+        }
+        window.onload = function(){
+            //변수선언
+            var MovingText = [];
+            for (var i=0; i<100; i++){
+                MovingText.push(new MovingText());
+            }
+            //움직입니다.
+            setInterval(function(){
+                for(var i in MovingText){
+                    MovingText[i].move();
+                }
+            },1000/60);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

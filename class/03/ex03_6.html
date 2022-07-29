@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="'viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+              // 변수 배열 선언
+              // 인덱스를 안 알려주고 어떻게 반복을 시키고 있냐!?
+
+              // 첫번째 0(Zero-based Indexing)
+              var array =['포도', '사과', '바나나', '망고'];
+              array[3]
+              // 반복문
+              // 0부터, array 길이까지, 1씩 늘려가며 반복
+              for(var i = 0; i < array.length; i++) {
+                alert(array[i]);
+              }
+
+              // array - 1부터, -1까지, 1씩 감소시키며 반복
+              for(var i = array.length - 1; i >= 0; i--) {
+                alert(array[i]);
+              }
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

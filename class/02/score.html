@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="'viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            //변수
+            var score1=Number(prompt('국어점수를 입력해주세요.',''));
+            var score2=Number(prompt('영어점수를 입력해주세요.',''));
+            var score3=Number(prompt('수학점수를 입력해주세요.',''));
+            var score_total = score1+score2+score3;
+            var score_average = score_total/3;
+            var score_result;
+            if(score_average>=90){score_result='수';}
+            else if(score_average>=80){score_result='우';}
+            else if(score_average>=70){score_result='미';}
+            else if(score_average>=60){score_result='양';}
+            else{score_result='가';}
+            alert('총점 : '+score_total+'\n평균 :'+score_average+'\n결과 :'+score_result);
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

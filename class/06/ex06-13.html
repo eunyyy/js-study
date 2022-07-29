@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="'viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+           window.onload=function(){
+            var hader = document.getElementById('myHeader');
+            var handler = function(){
+                this.style.color='red';
+                this.removeEventlistener('click',handler);
+            }
+            header.addEventlistener('click',hadnler);
+           }
+        </script>
+    </head>
+    <body>
+        <h1 id="myHeader">Click</h1>
+    </body>
+</html>

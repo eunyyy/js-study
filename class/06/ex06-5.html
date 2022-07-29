@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="'viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+           window.onload=function(){
+            //문서 객체 가져오기
+            var ButtonA=document.getElementById('button_a');
+            var ButtonB=document.getElementById('button_b');
+            var counterA=document.getElementById('counter_a');
+            var counterB=document.getElementById('counter_b');
+            //이벤트 연결
+            ButtonA.onclick=function(){
+                counterA.innerHTML=Number(counterA.innerHTML) + 1;
+            }
+            ButtonB.onclick=function(){
+                counterB.innerHTML=Number(counterB.innerHTML) + 1;
+                counterA.onclick();//이벤트 강제 실행
+            }
+           }
+        </script>
+    </head>
+    <body>
+        <Button id = "button_a">ButtonA</Button>
+        <Button id = "button_b">ButtonB</Button>
+        <h1>Button A - <span id = "counter_a">0</span></h1>
+        <h1>Button B - <span id = "counter_b">0</span></h1>
+    </body>
+</html>
