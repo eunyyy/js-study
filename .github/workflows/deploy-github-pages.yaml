@@ -3,6 +3,7 @@ name: Deploy Frontend to Github Pages
 on:
   push:
     branches: ['master']
+    paths: ['advanced']
 
 jobs:
   deploy:
