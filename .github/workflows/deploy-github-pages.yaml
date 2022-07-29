@@ -2,10 +2,8 @@ name: Deploy Frontend to Github Pages
 
 on:
   push:
-    branches:
-      - master
-    paths:
-      - 'advanced/**'
+    branches: ['master']
+    paths: ['advanced']
 
 jobs:
   deploy:
@@ -38,8 +36,5 @@ jobs:
 
       # Deploy with Github Pages
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GH_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./advanced
+        working-directory: ${{ env.working-directory }}
+        run: npm run deploy
