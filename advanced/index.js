@@ -18,7 +18,7 @@ const readDirs = () =>
     });
   });
 
-// REAMME.md 파일 존재 여부 확인
+// READsME.md 파일 존재 여부 확인
 const readChildDirMdFilePath = (dir) =>
   new Promise((resolve, reject) => {
     const currentPath = `${dirPath}/${dir}`;

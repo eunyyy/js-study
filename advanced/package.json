@@ -2,11 +2,11 @@
   "name": "js-study",
   "version": "1.0.0",
   "description": "Javascript Study",
-  "main": "./advanced/index.js",
+  "main": "./index.js",
   "type": "module",
   "scripts": {
-    "build": "node ./advanced/index.js",
-    "deploy": "gh-pages -d ./advanced"
+    "build": "node ./index.js",
+    "deploy": "gh-pages -d ./"
   },
   "dependencies": {
     "gh-pages": "^4.0.0",
@@ -18,11 +18,11 @@
   "author": "choewy",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/choewy/euny-study/issues"
+    "url": "https://github.com/eunyyy/js-study/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/choewy/euny-study.git"
+    "url": "git+https://github.com/eunyyy/js-study.git"
   },
-  "homepage": "https://github.com/choewy/euny-study"
+  "homepage": "https://github.com/eunyyy/js-study"
 }
