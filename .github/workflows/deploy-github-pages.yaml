@@ -22,7 +22,6 @@ jobs:
 
       # Install Node.js
       - name: Install Node.js ${{ matrix.node-version }}
-        working-directory: ${{ env.working-directory }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
@@ -39,7 +38,6 @@ jobs:
 
       # Deploy with Github Pages
       - name: Deploy
-        working-directory: ${{ env.working-directory }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_TOKEN }}
