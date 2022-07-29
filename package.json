@@ -18,11 +18,11 @@
   "author": "choewy",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/choewy/euny-study/issues"
+    "url": "https://github.com/eunyyy/js-study/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/choewy/euny-study.git"
+    "url": "git+https://github.com/eunyyy/js-study.git"
   },
-  "homepage": "https://github.com/choewy/euny-study"
+  "homepage": "https://github.com/eunyyy/js-study"
 }
