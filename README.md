@@ -1,6 +1,6 @@
 # JS Study
 
-- Github Page : https://github.com/eunyyy/js-study
+- Github Page : https://eunyyy.github.io/js-study
 
 ## 소스 코드 내려받기(최초 다운로드)
 
@@ -18,6 +18,7 @@ $ git pull origin master
 
 ```
 $ git add .
+$ git push origin master
 $ git commit -m "커밋 메시지"
 $ git push origin master
 ```

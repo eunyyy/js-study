@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "node ./index.js",
-    "deploy": "gh-pages -d ./public"
+    "deploy": "gh-pages -d ./"
   },
   "dependencies": {
     "gh-pages": "^4.0.0",

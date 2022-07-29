@@ -78,7 +78,7 @@ const createPageData = async (dirs) => {
 
 // JS 파일 생성
 const createJSFile = (pageDataRows) => {
-  const scriptFilePath = path.resolve(__dirname, 'public/static');
+  const scriptFilePath = path.resolve(__dirname, 'static');
   fs.writeFile(
     `${scriptFilePath}/links.js`,
     `const pageData = ${JSON.stringify(pageDataRows)};`,
