@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Jua',sans-serif;
+        }
+
+        img {
+            width: 500px;
+        }
+
+        .wrap{
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color:bisque;
+        }
+
+        .jumbotron {
+            width: 500px;
+        }
+
+
+        .comment{
+            font-weight: bold;
+            color: blue;
+        }
+
+        .posting-box {
+            margin: 10px auto 30px auto;
+            width: 500px;
+            border: 1px solid #555;
+            border-radius: 12px;
+            padding: 25px;
+            box-sizing: border-box;
+            background: #fff;
+        }
+
+        .posting-box input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #555;
+            border-radius: 7px;
+            margin: 5px 0 15px;
+        }
+
+        .posting-box button {
+            width: 100%;
+            display: flex;
+            padding: 10px;
+            margin: 25px 0 0;
+            box-sizing: border-box;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #555;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        .posting-box button:hover {
+            background: red;
+            color: white;
+        }
+
+        .card {
+            /* 상하 좌우 */
+            margin: 20px 0;
+            background: white;
+        }
+
+        .card-body {
+            /* 상 좌우 하 */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .card-text {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            white-space: pre-line;
+            padding: 0 0 50px 0;
+            box-sizing: border-box;
+        }
+
+        .card-text ul {
+            width: 100%;
+            list-style: none;
+        }
+
+        .card-text ul li {
+            padding: 0 10px 0 0;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="jumbotron">
+            <h1 class="display-4">음반 링크 메모장</h1>
+            <p class="lead">중요한 링크를 저장해두고, 나중에 볼 수 있는 공간입니다</p>
+            <hr class="my-4">
+            <p class="lead">
+                <!-- a는 링크를 누를 수 있는 요소 Href는 하이퍼링크-->
+                <a class="btn btn-primary btn-lg" href="#" role="button">포스팅박스 열기</a>
+            </p>
+        </div>
+        <div class="posting-box">
+            <div class="form-group">
+                <label for="exampleUnputpassword1">아티클URL</label>
+                <input type="email" class="form-control" aria-describedby="emailHelp"
+                    placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="exampleUnputpassword1">간단 코멘트</label>
+                <input type="password" class="form-control" placeholder="">
+            </div>
+            <button type="submit" class="btn btn-primary">음반 저장</button>
+        </div>
+        <div class="card-columns">
+            <div class="card">
+                <img class="card-img-top"
+                    src="https://w.namu.la/s/4a817b8f4ec9caca4027a6991651a401d683a7691f1926bd60e59908f306d439f7cc251af5ef263a6f0a249e831d5d9cf641855bf590dadd86869ff941aad8dcef4120eda96d7f2a1e0169e9d6251c6937eb0c8e526ec3e7a1278af6d884298e"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <!-- card-title에 기사 제목이 들어갑니다. -->
+                    <a href="https://www.google.com/search?q=Chat-Shire+%EC%95%84%EC%9D%B4%EC%9C%A0&source=lmns&bih=1009&biw=704&rlz=1C5CHFA_enKR932KR933&hl=ko&sa=X&ved=2ahUKEwjnjbTCmKD5AhVLVN4KHTxwCFgQ_AUoAHoECAEQAA"
+                     class="card-title">Chat-Shire 아이유 미니앨범</a> 
+                     <!-- card-text에 기사 요약 내용이 들어갑니다. -->
+                    <div class="card-text">
+                        <ul>
+                            <li>1. 새신발</li>
+                            <li>2. zeze</li>
+                            <li>3. 스물셋</li>
+                            <li>4. 푸르던</li>
+                            <li>5. Red Queen</li>
+                            <li>6. 무릎</li>
+                            <li>7. 안경</li>
+                        </ul>    
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top"
+                    src="https://image.bugsm.co.kr/album/images/500/202860/20286013.jpg"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <!-- card-title에 기사 제목이 들어갑니다. -->
+                    <a href="https://www.google.com/search?q=%EC%95%84%EC%9D%B4%EC%9C%A0+love+poem&source=lmns&bih=1009&biw=704&rlz=1C5CHFA_enKR932KR933&hl=ko&sa=X&ved=2ahUKEwiylI_zm6D5AhVUTPUHHcnuCQEQ_AUoAHoECAEQAA"
+                     class="card-title">Love poem 아이유 2019</a>
+                    <!-- card-text에 기사 요약 내용이 들어갑니다. --> 
+                    <h3>가사</h3>
+                    <div class="card-text">
+                        누구를 위해 누군가
+                        기도하고 있나 봐
+                        숨죽여 쓴 사랑시가
+                        낮게 들리는 듯해
+                        너에게로 선명히 날아가
+                        늦지 않게 자리에 닿기를
+                        I'll be there 홀로 걷는 너의 뒤에
+                        Singing till the end 그치지 않을 이 노래
+                        아주 잠시만 귀 기울여 봐
+                        유난히 긴 밤을 걷는 널 위해 부를게
+                        또 한 번 너의 세상에
+                        별이 지고 있나 봐
+                        숨죽여 삼킨 눈물이
+                        여기 흐르는 듯해
+                        할 말을 잃어 고요한 마음에
+                        기억처럼 들려오는 목소리
+                        I'll be there 홀로 걷는 너의 뒤에
+                        Singing till the end 그치지 않을 이 노래
+                        아주 커다란 숨을 쉬어 봐
+                        소리 내 우는 법을 잊은 널 위해 부를게
+                        부를게 (다시 사랑할 수 있도록)
+                        Here I am 지켜봐 나를, 난 절대
+                        Singing till the end 멈추지 않아 이 노래
+                        너의 긴 밤이 끝나는 그날
+                        고개를 들어 바라본 그곳에 있을게
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top"
+                    src="https://image.yes24.com/momo/TopCate362/MidCate001/36105438.jpg"
+                    alt="card image cap">
+                <div class="card-body">
+                    <!-- card-title에 기사 제목이 들어갑니다. -->
+                    <a href="https://www.google.com/search?q=%EC%95%84%EC%9D%B4%EC%9C%A0+%EA%BD%83%EA%B0%88%ED%94%BC&source=lmns&bih=1009&biw=671&rlz=1C5CHFA_enKR932KR933&hl=ko&sa=X&ved=2ahUKEwiHxZHCpKD5AhUaS_UHHZpGByoQ_AUoAHoECAEQAA"
+                     class="card-title">꽃갈피 아이유 리메이크</a> 
+                     <!-- card-text에 기사 요약 내용이 들어갑니다. -->
+                    <div class="card-text">
+                        <ul>
+                            <li>1. 나의 옛날 이야기</li>
+                            <li>2. 꽃</li>
+                            <li>3. 삐에로는 우릴 보고 웃지</li>
+                            <li>4. 사랑이 지나가면</li>
+                            <li>5. 너의 의미 (feat.김창완)</li>
+                            <li>6. 여름밤의 꿈</li>
+                            <li>7. 꿍따리 사바라 (feat.클론)</li>
+                        </ul>    
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top"
+                src="https://biz.chosun.com/resizer/ZqjWvqk-wMuHGqZ1tg3zprUqFZU=/464x0/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosunbiz/5MPZFEKKFX3E6F2WAXCIMC4QHQ.png"
+                alt="card image cap">
+                <div class="card-body">
+                    <!-- card-title에 기사 제목이 들어갑니다. -->
+                    <a href="https://www.google.com/search?q=Chat-Shire+%EC%95%84%EC%9D%B4%EC%9C%A0&source=lmns&bih=1009&biw=704&rlz=1C5CHFA_enKR932KR933&hl=ko&sa=X&ved=2ahUKEwjnjbTCmKD5AhVLVN4KHTxwCFgQ_AUoAHoECAEQAA"
+                     class="card-title">Celebrity 아이유</a> 
+                     <!-- card-text에 기사 요약 내용이 들어갑니다. -->
+
+                    <h3>가사</h3>
+                    <div class="card-text">
+                        세상의 모서리
+                        구부정하게 커버린
+                        골칫거리 outsider (ah ah)
+                        걸음걸이, 옷차림
+                        이어폰 너머 playlist
+                        음악까지 다 minor
+                        넌 모르지
+                        떨군 고개 위
+                        환한 빛 조명이
+                        어딜 비추는지
+                        느려도 좋으니
+                        결국 알게 되길
+                        The one and only
+                        You are my celebrity
+                        잊지마 넌 흐린 어둠 사이
+                        왼손으로 그린 별 하나
+                        보이니 그 유일함이 얼마나
+                        아름다운지 말야
+                        You are my celebrity
+                        Celebrity
+                        You are my celebrity
+                        지쳐버린 표정 마치
+                        전원을 꺼놓은 듯이
+                        심장소린 too quiet
+                        네가 가진 반짝거림
+                        상상력, identity
+                        까지 모조리 diet, woo
+                        넌 모르지
+                        아직 못다 핀
+                        널 위해 쓰여진
+                        오래된 사랑시
+                        헤매도 좋으니
+                        웃음 짓게 되길
+                        The one and only
+                        You are my celebrity
+                        잊지마 넌 흐린 어둠 사이
+                        왼손으로 그린 별 하나
+                        보이니 그 유일함이 얼마나
+                        아름다운지 말야
+                        You are my celebrity
+                        발자국마다 이어진 별자리
+                        그 서투른 걸음이 새겨놓은 밑그림
+                        오롯이 너를 만나러 가는 길
+                        그리로 가면 돼 점선을 따라
+                        잊지마 이 오랜 겨울 사이
+                        언 틈으로 피울 꽃 하나
+                        보이니 하루 뒤 봄이 얼마나
+                        아름다울지 말야
+                        You are my celebrity
+                        Celebrity
+                        You are my celebrity                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
