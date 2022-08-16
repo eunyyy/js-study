@@ -1,0 +1,16 @@
+.card{
+    display : flex;
+    width : 400px; height: 300px;
+}
+.card .content{
+    flex : 0 1 100%;
+}
+.card .toolbar{
+    flex:0 0 auto;
+    /* grow shrink basis */
+    width: 0;
+    transition: width 300ms;
+}
+.card:is(:hover, :focus-within).toolbar{
+    width: 64px;
+}

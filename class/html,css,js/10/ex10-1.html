@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery-ui-1.8.16.custom.min.js"></script>
+</head>
+<script>
+    $(document).ready(function(){
+        //이벤트를 연결합니다.
+        $('button').click(function(){
+            //변수를 선언합니다.
+            var easing = $('select > option:selected').html()
+            //animate() 메서드를 사용합니다.
+            $('div').animate({
+                left:'400'
+            },2000, easing).animate({
+                left : '0'
+            },1000, easing);
+        });
+    });
+</script>
+<body>
+    
+</body>
+</html>

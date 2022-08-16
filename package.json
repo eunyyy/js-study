@@ -1,0 +1,24 @@
+{
+  "name": "js-study",
+  "version": "1.0.0",
+  "description": "- Github Page : https://eunyyy.github.io/js-study",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "add": "git add .",
+    "commit": "git commit -m \"[feat] TIL by euny\"",
+    "push": "git push origin master",
+    "git": "npm run add && npm run commit && npm run push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eunyyy/js-study.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eunyyy/js-study/issues"
+  },
+  "homepage": "https://github.com/eunyyy/js-study#readme"
+}

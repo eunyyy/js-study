@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<style>
+    .swiper {
+  width: 600px;
+  height: 300px;
+}
+</style>
+<script>
+    $(document).ready(function(){
+        const swiper = new Swiper('.swiper',{
+            //Optional parameters
+            loop:true,
+            //If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            //Navigation arrows
+            navigation : {
+                nextE1:'.swiper-button-next',
+                prevE1:'.swiper-button-prev',
+            },
+            //And if we need scrollbar
+        });
+    });
+</script>
+</head>
+<body>
+<!-- Slider main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img src="https://www.kristaverrastro.com/wp-content/uploads/2018/10/Copy-of-600px-%C3%97-300px-%E2%80%93-Untitled-Design.png"></div>
+      <div class="swiper-slide"><img src="https://cdn.vox-cdn.com/thumbor/2jZxJzDrRTEaCJaSU_QFbN-ACZ0=/59x0:3859x2850/1400x1400/filters:focal(59x0:3859x2850):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/45859416/brunch-is-the-worst.0.0.jpeg"></div>
+      <div class="swiper-slide"><img src="https://b.rgbimg.com/users/k/ka/kalilo/600/mfmofLS.jpg"></div>
+      ...
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+</body>
+</html>

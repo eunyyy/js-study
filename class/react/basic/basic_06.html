@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        //1. 콘텐츠를 코드로 넣을때 : {}
+        //2. 속성을 코드로 넣을떄 : title={코드}.(O),샤싣="{코드}"(X)
+        //3. 스타일을 코드로 : style={객체} background-color=>backgroundColor
+        const str = "Hello"
+        const element = <h1>{str}world</h1>
+        const root=(document.getElementById('root'))
+        ReactDOM.render(element,root)
+    </script>
+</body>
+</html>
